@@ -1,7 +1,7 @@
 # CHERIoT RTOS `build2` support prototype
 
 Note: you will need to use the [latest staged `build2`
-version](https://build2.org/community.xhtml#stage) until 0.17.0 is released.
+version](https://build2.org/community.xhtml#stage) until 0.18.0 is released.
 
 Building the example in source (add `-v` to see the compilation/linking
 command lines, configuration report, etc):
@@ -10,6 +10,14 @@ command lines, configuration report, etc):
 $ cd cheriot-rtos/examples/01.hello_world
 $ b config.cxx=/cheriot-tools/bin/clang++ \
     config.cheriot_rtos.board=ibex-safe-simulator
+```
+
+To generate and maintain a JSON compilation database:
+
+```
+$ b config.cxx=/cheriot-tools/bin/clang++ \
+    config.cheriot_rtos.board=ibex-safe-simulator \
+    config.cc.compiledb=hello_world@./compile_commands.json
 ```
 
 To configure the example (so that we don't have to repeat `config.*`):
