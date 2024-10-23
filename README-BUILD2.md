@@ -17,7 +17,7 @@ To generate and maintain a JSON compilation database:
 ```
 $ b config.cxx=/cheriot-tools/bin/clang++ \
     config.cheriot_rtos.board=ibex-safe-simulator \
-    config.cc.compiledb=hello_world@./compile_commands.json
+    config.cc.compiledb=./
 ```
 
 To configure the example (so that we don't have to repeat `config.*`):
