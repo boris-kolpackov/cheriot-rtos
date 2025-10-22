@@ -352,9 +352,6 @@ firmware{*}:
 define dump: file
 dump{*}: extension = dump
 
-define json: file
-json{*}: extension = json
-
 # Note: the order in which we specify things to link is no significant.
 #
 [rule_name=link_firmware] <firmware{~'/(.+)/'} dump{^'/\1/'} json{^'/\1/'}>: \
