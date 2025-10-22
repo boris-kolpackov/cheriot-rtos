@@ -18,7 +18,7 @@ board_file = $sdk/boards/$(config.cheriot_rtos.board).json
 if! $file_exists($board_file)
   fail "unknown board '$config.cheriot_rtos.board': file $board_file does not exist"
 
-[json_object] board = $json.load($board_file)
+[json_object] board = $json.load($board_file, json5)
 
 # Dump the board JSON if running with -V or higher (useful for debugging).
 #
