@@ -6,15 +6,18 @@ firmware{hello_world}: compartment{hello}
               stack_size@0x200       \
               trusted_stack_frames@1)
 
-  # Alternative way to specify the same as JSON text.
+  # Alternative way to specify the same as JSON5.
   #
   #\
 
-  threads += '{"compartment":"hello",
-               "priority":1,
-               "entry_point":"say_hello",
-               "stack_size":512,
-               "trusted_stack_frames":1}'
+  threads += '{
+    compartment          : "hello",
+    priority             : 1,
+    entry_point          : "say_hello",
+    stack_size           : 0x200,
+    trusted_stack_frames : 1
+  }'
+
   #\
 }
 
