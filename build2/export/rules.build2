@@ -3,7 +3,7 @@
 if! ($build.version.major > 0  || \
      $build.version.minor > 18 || \
      ($build.version.minor == 18 && (!$build.version.snapshot || \
-                                     $build.version.snapshot_sn >= 20251022054322)))
+                                     $build.version.snapshot_sn >= 20251106122913)))
   fail "build2 version $build.version is too old"
 
 config [string] config.cheriot_rtos.board

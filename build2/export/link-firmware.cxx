@@ -374,7 +374,7 @@ perform_update (action a, const target& xt)
   // Hash the command line and compare with depdb.
   //
   {
-    sha256 cs;
+    xxh64 cs;
     for (const char* a: args)
       cs.append (a);
 
